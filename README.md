@@ -1,2 +1,3 @@
-# MacklinJankowski_JAvianBio_2025
-Repository for code for Macklin &amp; Jankowski (2025)
+# Macklin & Jankowski (2025) - Unifying species distributions, community science and the 'natural removal experiment' to explore species interactions at broad geographic scales.
+
+This repository contains the code needed to reproduce the analyses conducted in Macklin & Jankowski (2025). Due to licensing restrictions, users must obtain the data necessary to complete the analyses themselves, though we have made every effort to make this as simple a process as possible. We have included links to the data sources (permanent DOIs where possible) and built the folder structure of this repository such that it should be easy to drop data files into the correct location with ease.
