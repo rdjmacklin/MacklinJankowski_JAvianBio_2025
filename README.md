@@ -37,6 +37,8 @@ In 01_eBird Data Filtering and Organization.R the user will supply eBird data do
 
 Raw species data files should be stored in each species respective directory under `Data/Raw/eBird-Basic-Dataset/CBCH` or `Data/Raw/eBird-Basic-Dataset/BCCH`. The sampling event database should be stored under `Data/Raw/eBird-Basic-Dataset/EBD-Sampling`. The default names for files supplied by eBird upon download are retained in the R script, but so long as the user changes both the filename and the reference in the R script, users may customize filenames as they see fit.
 
+This script will output zero-filled and filtered checklist data for each species for use in species distribution modeling. These files will be stored in `Data/Cleaned/eBird-Basic-Dataset/Zero-Filled-and-Filtered/BCCH` and `Data/Cleaned/eBird-Basic-Dataset/Zero-Filled-and-Filtered/CBCH` respectively.
+
 ## 02_Habitat Data Download and Organization.R
 
 02_Habitat Data Download and Organization.R imports data from a variety of sources, in some cases automated via R packages. Each source will be explained below.
@@ -53,7 +55,7 @@ Raw species data files should be stored in each species respective directory und
 * Global canopy height data from Potapov et al. (2021) were downloaded from <https://glad.geog.umd.edu/dataset/gedi/>. We downloaded the `Forest_height_2019_NAM.tif` file. In case this link dies, the associated publication can be accessed via the permanent identifier at <https://doi.org/10.1016/j.rse.2020.112165> and the corresponding author can be contacted at <potapov@umd.edu>. As there is no licensing information provided with the data, we do not include it here. These data should be stored in `Data/Raw/GEDI`.
 * Users must supply the Daymet rasters derived from Thornton et al. (2022) in the `Data/Raw/Daymet` directory. Data can be accessed at <https://doi.org/10.3334/ORNLDAAC/2130> should users wish to access the data themselves.
 
-With these datafiles, the user will be able to recreate both the checklist-level covariate datasets and the prediction grid across the study area needed to conduct the analysis.
+This script will output a .csv with environmental covariate data matched to each checklist for use in species distribution modeling, as well as a .csv prediction grid of the specified study area containing all covariate data and a .tif basemap for that grid, matched by `cell_id`. These files will be stored in `Data/Cleaned/Environmental-Variables` and `Data/Cleaned/Prediction-Grids` respectively.
 
 # 03_Species Distribution Modeling.R
 
@@ -66,3 +68,15 @@ This file is used to conduct the bulk of the analysis and requires a few more da
 * We provide the Natural Earth Counties and Coastlines polygons, as they are under public domain (<https://www.naturalearthdata.com/about/terms-of-use/>). These data are available directly from Natural Earth at <https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-coastline/> and <https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-2-counties/>. Users procuring the data themselves should place the contents of zipped datafiles in `Data/Raw/Natural-Earth/ne_10m_coastline` and `Data/Raw/Natural-Earth/ne_10m_admin_2_counties` respectively.
 
 With these files, the user should have all they need to conduct the full analysis. Note that this script will take a long time (i.e. days to weeks depending on processing power), at times running in parallel. The script is set to use all but one of the available cores for parallel processing. Users may adjust this option by modifying the `cores` object within the script.
+
+# References
+
+Amatulli, G., Domisch, S., Tuanmu, M.-N., Parmentier, B., Ranipeta, A., Malczyk, J., and Jetz, W. (2018) A suite of global, cross-scale topographic variables for environmental and biodiversity modeling. Scientific Data volume 5, Article number: 180040. doi:10.1038/sdata.2018.40
+
+Elvidge, C.D., Zhizhin, M., Ghosh T., Hsu F.C., and Taneja J. (2021) Annual time series of global VIIRS nighttime lights derived from monthly averages:2012 to 2019. Remote Sensing 13(5), p.922, doi:10.3390/rs13050922
+
+Fink, D., Auer T., Johnston A., Strimas-Mackey M., Ligocki S., Robinson O., Hochachka W., Jaromczyk L., Rodewald A., Wood C., Davies I., and Spencer A (2022) eBird Status and Trends, Data Version: 2021. Cornell Lab of Ornithology, Ithaca, New York. doi: 10.2173/ebirdst.2021
+
+Potapov, P., Li, X., Hernandez-Serna, A., Tyukavina, A., Hansen, M. C., Kommareddy, A., Pickens, A., Turubanova, S., Tang, H., Silva, C. E., Armston, J., Dubayah, R., Blair, J. B. and Hofton, M. (2021) Mapping global forest canopy height through integration of GEDI and Landsat data. Remote Sensing of Environment 253: 112165. doi: 10.1016/j.rse.2020.112165
+
+
