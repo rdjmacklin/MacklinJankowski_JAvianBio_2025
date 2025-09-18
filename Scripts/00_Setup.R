@@ -6,7 +6,7 @@
 
 # Install librarian package if not already installed.
 
-if(!requireNamespace("librarian"), quietly = TRUE) {
+if(!requireNamespace("librarian", quietly = TRUE)) {
   install.packages("librarian")
 }
 
@@ -15,12 +15,15 @@ if(!requireNamespace("librarian"), quietly = TRUE) {
 necessary.dirs <- c("./Data/Raw/eBird-Basic-Dataset", "./Data/Raw/eBird-Basic-Dataset/CBCH",
                     "./Data/Raw/eBird-Basic-Dataset/BCCH", "./Data/Raw/eBird-Basic-Dataset/EBD-Sampling",
                     "./Data/Raw/BCR_Terrestrial", "./Data/Raw/GEDI", "./Data/Raw/eBird-Status-and-Trends",
-                    "./Data/Raw/BC_Regional-Districts", "./Data/Cleaned", "./Data/Cleaned/eBird-Basic-Dataset",
+                    "./Data/Raw/BC_Regional-Districts", "./Data/Raw/GRIP4-Vector", "./Data/Raw/Daymet",
+                    "./Data/Raw/VIIRS", "./Data/Raw/Elevation",
+                    "./Data/Cleaned", "./Data/Cleaned/eBird-Basic-Dataset",
                     "./Data/Cleaned/eBird-Basic-Dataset/Filtered", "./Data/Cleaned/eBird-Basic-Dataset/Filtered/BCCH",
                     "./Data/Cleaned/eBird-Basic-Dataset/Filtered/CBCH", "./Data/Cleaned/eBird-Basic-Dataset/Zero-Filled-and-Filtered",
                     "./Data/Cleaned/eBird-Basic-Dataset/Zero-Filled-and-Filtered/BCCH", "./Data/Cleaned/eBird-Basic-Dataset/Zero-Filled-and-Filtered/CBCH",
-                    "./Data/Cleaned/Environmental-Variables", "./Data/Cleaned/Prediction-Grids", "./Outputs",
-                    "./Outputs/Plots", "./Outputs/Tables", "./Scripts/RData")
+                    "./Data/Cleaned/Environmental-Variables", "./Data/Cleaned/Prediction-Grids", 
+                    "./Outputs", "./Outputs/Plots", "./Outputs/Tables", 
+                    "./Scripts/RData")
 
 for(i in necessary.dirs) {
   
