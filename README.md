@@ -14,16 +14,20 @@ Rory D.J. Macklin <sup>1,2 \*</sup> and Jill E. Jankowski <sup>1,2</sup>
 
 This repository contains the code needed to reproduce the analyses conducted in Macklin & Jankowski (2025). Due to licensing restrictions, users must obtain the data necessary to complete the analyses themselves, though we have made every effort to make this as simple a process as possible. We have included links to the data sources (permanent DOIs where possible) and built the folder structure of this repository such that it should be easy to drop data files into the correct location with ease.
 
-The three necessary scripts for running this analysis are contained in the Scripts folder and are as follows:
+The four necessary scripts for running this analysis are contained in the Scripts folder and are as follows:
 
-1. eBird Data Filtering and Organization.R
-2. Habitat Data Download and Organization.R
-3. Species Distribution Modeling.R
+1. 00_Setup.R
+2. 01_eBird Data Filtering and Organization.R
+3. 02_Habitat Data Download and Organization.R
+4. 03_Species Distribution Modeling.R
 
+## 00_Setup
 
-## eBird Data Filtering and Organization.R
+This script installs our package management tool `librarian` <https://cran.r-project.org/web/packages/librarian/> and creates the necessary directories for the analysis.
 
-In Script 1: eBird Data Filtering and Organization.R the user will supply eBird data downloaded from <https://www.ebird.org/science/download-ebird-data-products>. To get the exact release we used in our analysis, users may have to reach out to eBird at <ebird@cornell.edu> requesting the Apr-2023 release. The user will need to download the eBird Basic Dataset Sampling Event Data and eBird Basic Dataset filtered to the Chestnut-backed Chickadee (*Poecile rufescens*; CBCH) and Black-capped Chickadee (*P. atricapillus*; BCCH) and to data from January, 2000 or later for the following 5 regions:
+## 01_eBird Data Filtering and Organization.R
+
+In 01_eBird Data Filtering and Organization.R the user will supply eBird data downloaded from <https://www.ebird.org/science/download-ebird-data-products>. To get the exact release we used in our analysis, users may have to reach out to eBird at <ebird@cornell.edu> requesting the Apr-2023 release. The user will need to download the eBird Basic Dataset Sampling Event Data and eBird Basic Dataset filtered to the Chestnut-backed Chickadee (*Poecile rufescens*; CBCH) and Black-capped Chickadee (*P. atricapillus*; BCCH) and to data from January, 2000 or later for the following 5 regions:
 
 1. Alaska, USA
 2. British Columbia, Canada,
@@ -33,9 +37,9 @@ In Script 1: eBird Data Filtering and Organization.R the user will supply eBird 
 
 Raw species data files should be stored in each species respective directory under `Data/Raw/eBird-Basic-Dataset/CBCH` or `Data/Raw/eBird-Basic-Dataset/BCCH`. The sampling event database should be stored under `Data/Raw/eBird-Basic-Dataset/EBD-Sampling`. The default names for files supplied by eBird upon download are retained in the R script, but so long as the user changes both the filename and the reference in the R script, users may customize filenames as they see fit.
 
-## Habitat Data Download and Organization.R
+## 02_Habitat Data Download and Organization.R
 
-Script 2: Habitat Data Download and Organization.R imports data from a variety of sources, in some cases automated via R packages. Each source will be explained below.
+02_Habitat Data Download and Organization.R imports data from a variety of sources, in some cases automated via R packages. Each source will be explained below.
 
 * The R package 'rnaturalearth' acts to gather the necessary basemap data. See <https://github.com/ropensci/rnaturalearth> and <https://cran.r-project.org/web/packages/rnaturalearth/index.html>. Code is included to facilitate data download, but in case this code becomes defunct over time, we include the data modified and compiled into a geopackage under `Data/Raw/Natural-Earth` as the necessary data are released under the public domain (<https://www.naturalearthdata.com/about/terms-of-use/>).
 * Bird Conservation Region shapefiles are downloaded within the script from <https://birdscanada.org/download/gislab/bcr_terrestrial_shape.zip>. Should this link die, alternative sources of the data may be found at <https://www.birdscanada.org/bird-science/nabci-bird-conservation-regions> or by contacting <birdmap@birdscanada.org>. As we lack licensing information, we do not include the raw data files in this repository. These data should be stored in `Data/Raw/BCR_Terrestrial`.
@@ -51,7 +55,7 @@ Script 2: Habitat Data Download and Organization.R imports data from a variety o
 
 With these datafiles, the user will be able to recreate both the checklist-level covariate datasets and the prediction grid across the study area needed to conduct the analysis.
 
-# Species Distribution Modeling.R
+# 03_Species Distribution Modeling.R
 
 This file is used to conduct the bulk of the analysis and requires a few more data files that we have not already imported. We describe the process for obtaining this data here.
 * We provide the eBird Status and Trend range polygons for CBCH and BCCH as the distribution of these data for the purposes of scientific publication is permitted (<https://science.ebird.org/en/status-and-trends/products-access-terms-of-use>). We accessed these from the eBird Status and Trends Data Version 2021 release (Fink et al. 2022). Should users wish to obtain the data themselves, they must contact <ebird@cornell.edu> to request the version needed to exactly replicate our analysis. The two `.gpkg` files should be placed within the `Data/Raw/eBird-Status-and-Trends` directory.
