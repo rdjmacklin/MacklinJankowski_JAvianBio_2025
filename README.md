@@ -12,7 +12,7 @@ Rory D.J. Macklin <sup>1,2 \*</sup> and Jill E. Jankowski <sup>1,2</sup>
 
 # Contents
 
-This repository contains the code needed to reproduce the analyses conducted in Macklin & Jankowski (2025). Due to licensing restrictions, users must obtain the data necessary to complete the analyses themselves, though we have made every effort to make this as simple a process as possible. We have included links to the data sources (permanent DOIs where possible) and built the folder structure of this repository such that it should be easy to drop data files into the correct location with ease.
+This repository contains the code needed to reproduce the analyses conducted in Macklin & Jankowski (2025). Due to licensing restrictions, users must obtain the data necessary to complete the analyses themselves, though we have made every effort to make this as simple a process as possible. We have included links to the data sources (permanent DOIs where possible) and built the folder structure of this repository such that it should be easy to drop data files into the correct location.
 
 The four necessary scripts for running this analysis are contained in the Scripts folder and are as follows:
 
@@ -68,6 +68,8 @@ This file is used to conduct the bulk of the analysis and requires a few more da
 * We provide the Natural Earth Counties and Coastlines polygons, as they are under public domain (<https://www.naturalearthdata.com/about/terms-of-use/>). These data are available directly from Natural Earth at <https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-coastline/> and <https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-2-counties/>. Users procuring the data themselves should place the contents of zipped datafiles in `Data/Raw/Natural-Earth/ne_10m_coastline` and `Data/Raw/Natural-Earth/ne_10m_admin_2_counties` respectively.
 
 With these files, the user should have all they need to conduct the full analysis. Note that this script will take a long time (i.e. days to weeks depending on processing power), at times running in parallel. The script is set to use all but one of the available cores for parallel processing. Users may adjust this option by modifying the `cores` object within the script.
+
+This script will produce the components of Figures 1-6 from the manuscript as well as all supplementary tables and figures. These will be stored in `Outputs/Plots` and `Outputs/Tables` respectively.
 
 # References
 
