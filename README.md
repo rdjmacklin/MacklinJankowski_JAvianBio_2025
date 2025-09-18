@@ -23,7 +23,7 @@ The four necessary scripts for running this analysis are contained in the Script
 
 ## 00_Setup
 
-This script installs our package management tool `librarian` <https://cran.r-project.org/web/packages/librarian/> and creates the necessary directories for the analysis.
+This script installs our package management tool `librarian` (<https://cran.r-project.org/web/packages/librarian/>) and creates the necessary directories for the analysis.
 
 ## 01_eBird Data Filtering and Organization.R
 
