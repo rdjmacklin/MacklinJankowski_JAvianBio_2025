@@ -14,6 +14,8 @@ Rory D.J. Macklin <sup>1,2 \*</sup> and Jill E. Jankowski <sup>1,2</sup>
 
 This repository contains the code needed to reproduce the analyses conducted in Macklin & Jankowski (2025). Due to licensing restrictions, users must obtain the data necessary to complete the analyses themselves, though we have made every effort to make this as simple a process as possible. We have included links to the data sources (permanent DOIs where possible) and built the folder structure of this repository such that it should be easy to drop data files into the correct location.
 
+Note that much of the work for this analysis was based off of the fantastic guide for using eBird from Strimas-Mackey et al. (2023) -  see <https://ebird.github.io/ebird-best-practices/index.html>.
+
 The four necessary scripts for running this analysis are contained in the Scripts folder and are as follows:
 
 1. 00_Setup.R
@@ -84,5 +86,7 @@ Elvidge, C.D., Zhizhin, M., Ghosh T., Hsu F.C., and Taneja J. (2021) Annual time
 Fink, D., Auer T., Johnston A., Strimas-Mackey M., Ligocki S., Robinson O., Hochachka W., Jaromczyk L., Rodewald A., Wood C., Davies I., and Spencer A (2022) eBird Status and Trends, Data Version: 2021. Cornell Lab of Ornithology, Ithaca, New York. doi: 10.2173/ebirdst.2021
 
 Potapov, P., Li, X., Hernandez-Serna, A., Tyukavina, A., Hansen, M. C., Kommareddy, A., Pickens, A., Turubanova, S., Tang, H., Silva, C. E., Armston, J., Dubayah, R., Blair, J. B. and Hofton, M. (2021) Mapping global forest canopy height through integration of GEDI and Landsat data. Remote Sensing of Environment 253: 112165. doi: 10.1016/j.rse.2020.112165
+
+Strimas-Mackey, M., Hochachka W. M., Ruiz-Gutierrez V., Robinson O. J., Miller E. T., Auer T., Kelling S., Fink D., and Johnston A. (2023) Best Practices for Using eBird Data. Version 2.0. https://ebird.github.io/ebird-best-practices/. Cornell Lab of Ornithology, Ithaca, New York. doi:10.5281/zenodo.3620739
 
 
