@@ -21,7 +21,7 @@ The four necessary scripts for running this analysis are contained in the Script
 3. 02_Habitat Data Download and Organization.R
 4. 03_Species Distribution Modeling.R
 
-## 00_Setup
+## 00_Setup.R
 
 This script installs our package management tool `librarian` (<https://cran.r-project.org/web/packages/librarian/>) and creates the necessary directories for the analysis.
 
