@@ -1,9 +1,6 @@
 ################################################################################
 
-# Script Title: Filtering and Visualizing the eBird Basic Dataset for Bird
-# Conservation Region 5 wide analysis of the impact of Black-capped Chickadee
-# Presence on Chestnut-backed Chickadee Relative Abundance at two spatial
-# grains.
+# Script Title: Filtering and Visualizing the eBird Basic Dataset.
 
 # Note: Much of the code in this script is taken from Dr. Matthew Strimas-Mackey's
 # fantastic guide on the analysis of eBird Data, which can be found here:
@@ -12,8 +9,6 @@
 ################################################################################
 
 ## Install required packages (if not already installed).
-
-# install.packages("librarian")
 
 librarian::shelf(auk, lubridate, sf, gridExtra, tidyverse, utils)
 
@@ -29,7 +24,6 @@ select <- dplyr::select
 # British Columbia, Washington, Oregon, and California respectively from the
 # Apr-2023 release of the eBird Dataset & the same 5 files for Black-capped 
 # Chickadee (Poecile atricapillus). We filtered data to Jan 2000 and later.
-# See README for full citation.
 
 ### Filtering Chestnut-backed Chickadee Data
 

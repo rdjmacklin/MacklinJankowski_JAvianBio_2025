@@ -17,7 +17,7 @@ necessary.dirs <- c("./Data/Raw/eBird-Basic-Dataset", "./Data/Raw/eBird-Basic-Da
                     "./Data/Raw/BCR_Terrestrial", "./Data/Raw/GEDI", "./Data/Raw/eBird-Status-and-Trends",
                     "./Data/Raw/BC_Regional-Districts", "./Data/Raw/GRIP4-Vector", "./Data/Raw/Daymet",
                     "./Data/Raw/VIIRS", "./Data/Raw/Elevation",
-                    "./Data/Cleaned", "./Data/Cleaned/eBird-Basic-Dataset",
+                    "./Data/Cleaned/eBird-Basic-Dataset",
                     "./Data/Cleaned/eBird-Basic-Dataset/Filtered", "./Data/Cleaned/eBird-Basic-Dataset/Filtered/BCCH",
                     "./Data/Cleaned/eBird-Basic-Dataset/Filtered/CBCH", "./Data/Cleaned/eBird-Basic-Dataset/Zero-Filled-and-Filtered",
                     "./Data/Cleaned/eBird-Basic-Dataset/Zero-Filled-and-Filtered/BCCH", "./Data/Cleaned/eBird-Basic-Dataset/Zero-Filled-and-Filtered/CBCH",
